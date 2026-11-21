@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookNook — curated books for curious readers. Sample prototype.">
+  <title>BookNook 📚 — Find Your Next Great Read</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="#home" class="logo">BookNook <span>📚</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Why Us</a>
+      <a href="#books">Books</a>
+      <a href="#staff">Staff Picks</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Visit</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <span class="hero-tag">✦ Curated Collection 2025</span>
+      <h1>Find Your Next<br><span>Great Read.</span></h1>
+      <p>Hand-picked books across fiction, non-fiction and beyond. Delivered to your door with a bookmark and a smile.</p>
+
+      <form class="search-bar" onsubmit="event.preventDefault(); document.getElementById('productGrid').scrollIntoView({behavior:'smooth'});">
+        <input type="text" id="searchInput" placeholder="Search by title, author..." aria-label="Search books">
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="hero-stats">
+        <div><strong>12+</strong><span>Books</span></div>
+        <div><strong>6</strong><span>Genres</span></div>
+        <div><strong>4.8★</strong><span>Reader Rated</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images/books/silent-patient.svg" alt="The Silent Patient" class="float f1">
+      <img src="images/books/atomic-habits.svg" alt="Atomic Habits" class="float f2">
+      <img src="images/books/pride-prejudice.svg" alt="Pride and Prejudice" class="float f3">
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="features">
+    <div class="feature">
+      <div class="f-icon">🚚</div>
+      <h3>Free Delivery</h3>
+      <p>On every order above LKR 3,000.</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">📖</div>
+      <h3>Curated Selection</h3>
+      <p>Every title hand-picked by our team.</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">💝</div>
+      <h3>Gift Wrapping</h3>
+      <p>Free wrapping for every gift order.</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">🔁</div>
+      <h3>Easy Returns</h3>
+      <p>7-day no-questions returns.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKS ============ -->
+  <section id="books" class="books">
+    <div class="section-head">
+      <h2>Our Collection</h2>
+      <p>Twelve hand-picked titles to start your shelf.</p>
+    </div>
+
+    <div class="filter-buttons">
+      <button data-cat="all" class="active">All</button>
+      <button data-cat="fiction">Fiction</button>
+      <button data-cat="nonfiction">Non-Fiction</button>
+      <button data-cat="children">Children</button>
+      <button data-cat="academic">Academic</button>
+      <button data-cat="comics">Comics</button>
+      <button data-cat="romance">Romance</button>
+    </div>
+
+    <p class="result-count" id="resultCount">Showing 12 of 12 books</p>
+
+    <div class="grid" id="productGrid">
+
+      <article class="card" data-cat="fiction" data-title="the silent patient" data-author="alex michaelides">
+        <div class="thumb-wrap">
+          <span class="badge badge-best">Bestseller</span>
+          <img src="images/books/silent-patient.svg" alt="The Silent Patient" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Fiction</span>
+          <h3>The Silent Patient</h3>
+          <p class="author">by Alex Michaelides</p>
+          <p>A psychotherapist unravels a wife's silence after a shocking crime.</p>
+          <div class="rating">★★★★★ <small>4.5 (128)</small></div>
+          <div class="price">LKR 2,400</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="nonfiction" data-title="atomic habits" data-author="james clear">
+        <div class="thumb-wrap">
+          <span class="badge badge-best">Bestseller</span>
+          <img src="images/books/atomic-habits.svg" alt="Atomic Habits" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Non-Fiction</span>
+          <h3>Atomic Habits</h3>
+          <p class="author">by James Clear</p>
+          <p>Tiny changes, remarkable results. A practical habit framework.</p>
+          <div class="rating">★★★★★ <small>4.8 (312)</small></div>
+          <div class="price">LKR 3,200</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="children" data-title="where the wild things are" data-author="maurice sendak">
+        <div class="thumb-wrap">
+          <img src="images/books/wild-things.svg" alt="Where the Wild Things Are" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Children</span>
+          <h3>Where the Wild Things Are</h3>
+          <p class="author">by Maurice Sendak</p>
+          <p>A timeless adventure about imagination, mischief and home.</p>
+          <div class="rating">★★★★★ <small>4.9 (87)</small></div>
+          <div class="price">LKR 1,800</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="academic" data-title="introduction to algorithms" data-author="cormen">
+        <div class="thumb-wrap">
+          <img src="images/books/algorithms.svg" alt="Introduction to Algorithms" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Academic</span>
+          <h3>Introduction to Algorithms</h3>
+          <p class="author">by Cormen, Leiserson, Rivest</p>
+          <p>The definitive reference for algorithmic thinking and design.</p>
+          <div class="rating">★★★★★ <small>4.7 (54)</small></div>
+          <div class="price">LKR 8,500</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="comics" data-title="one piece vol 1" data-author="eiichiro oda">
+        <div class="thumb-wrap">
+          <img src="images/books/one-piece.svg" alt="One Piece Vol. 1" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Comics</span>
+          <h3>One Piece Vol. 1</h3>
+          <p class="author">by Eiichiro Oda</p>
+          <p>The beginning of the greatest pirate adventure ever told.</p>
+          <div class="rating">★★★★★ <small>4.6 (201)</small></div>
+          <div class="price">LKR 1,500</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="romance" data-title="pride and prejudice" data-author="jane austen">
+        <div class="thumb-wrap">
+          <img src="images/books/pride-prejudice.svg" alt="Pride and Prejudice" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Romance</span>
+          <h3>Pride and Prejudice</h3>
+          <p class="author">by Jane Austen</p>
+          <p>Wit, romance and social satire from a timeless classic.</p>
+          <div class="rating">★★★★★ <small>4.8 (445)</small></div>
+          <div class="price">LKR 1,900</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="fiction" data-title="the midnight library" data-author="matt haig">
+        <div class="thumb-wrap">
+          <span class="badge badge-new">New</span>
+          <img src="images/books/midnight-library.svg" alt="The Midnight Library" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Fiction</span>
+          <h3>The Midnight Library</h3>
+          <p class="author">by Matt Haig</p>
+          <p>Between life and death is a library of infinite possibilities.</p>
+          <div class="rating">★★★★☆ <small>4.4 (98)</small></div>
+          <div class="price">LKR 2,600</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="nonfiction" data-title="sapiens" data-author="yuval harari">
+        <div class="thumb-wrap">
+          <img src="images/books/sapiens.svg" alt="Sapiens" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Non-Fiction</span>
+          <h3>Sapiens</h3>
+          <p class="author">by Yuval Noah Harari</p>
+          <p>A brief history of humankind — from stone age to silicon age.</p>
+          <div class="rating">★★★★★ <small>4.7 (167)</small></div>
+          <div class="price">LKR 3,800</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="children" data-title="the very hungry caterpillar" data-author="eric carle">
+        <div class="thumb-wrap">
+          <img src="images/books/hungry-caterpillar.svg" alt="The Very Hungry Caterpillar" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Children</span>
+          <h3>The Very Hungry Caterpillar</h3>
+          <p class="author">by Eric Carle</p>
+          <p>A little caterpillar eats his way to becoming a butterfly.</p>
+          <div class="rating">★★★★★ <small>4.9 (203)</small></div>
+          <div class="price">LKR 1,600</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="academic" data-title="clean code" data-author="robert martin">
+        <div class="thumb-wrap">
+          <img src="images/books/clean-code.svg" alt="Clean Code" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Academic</span>
+          <h3>Clean Code</h3>
+          <p class="author">by Robert C. Martin</p>
+          <p>A handbook of agile software craftsmanship and readable code.</p>
+          <div class="rating">★★★★★ <small>4.6 (89)</small></div>
+          <div class="price">LKR 6,900</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="comics" data-title="naruto vol 1" data-author="masashi kishimoto">
+        <div class="thumb-wrap">
+          <img src="images/books/naruto.svg" alt="Naruto Vol. 1" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Comics</span>
+          <h3>Naruto Vol. 1</h3>
+          <p class="author">by Masashi Kishimoto</p>
+          <p>A young ninja with a dream to become the strongest in his village.</p>
+          <div class="rating">★★★★☆ <small>4.5 (142)</small></div>
+          <div class="price">LKR 1,500</div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="romance" data-title="the notebook" data-author="nicholas sparks">
+        <div class="thumb-wrap">
+          <span class="badge badge-sale">Sale</span>
+          <img src="images/books/notebook.svg" alt="The Notebook" loading="lazy">
+          <button class="save" aria-label="Save book">♡</button>
+        </div>
+        <div class="card-body">
+          <span class="cat-tag">Romance</span>
+          <h3>The Notebook</h3>
+          <p class="author">by Nicholas Sparks</p>
+          <p>A love story that endures across time, memory and distance.</p>
+          <div class="rating">★★★★☆ <small>4.3 (76)</small></div>
+          <div class="price">LKR 2,000</div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="no-results" id="noResults" style="display:none; text-align:center; color:#999; padding:2rem;">No books match your search.</p>
+  </section>
+
+  <!-- ============ STAFF PICKS ============ -->
+  <section id="staff" class="staff">
+    <div class="section-head">
+      <h2>Staff Picks</h2>
+      <p>Our team's current favourites, hand-picked each month.</p>
+    </div>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-cover">📕</div>
+        <div>
+          <span class="cat-tag">Fiction</span>
+          <h3>The Silent Patient</h3>
+          <p>"A psychological thriller that keeps you guessing until the last page." — From Nethmi</p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-cover">📚</div>
+        <div>
+          <span class="cat-tag">Non-Fiction</span>
+          <h3>Sapiens</h3>
+          <p>"The most perspective-shifting book on human history I've read." — From Nethmi</p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-cover">📖</div>
+        <div>
+          <span class="cat-tag">Fiction</span>
+          <h3>The Midnight Library</h3>
+          <p>"A gentle, thoughtful read about choices and second chances." — From Nethmi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" class="testimonials">
+    <div class="section-head">
+      <h2>What Readers Say</h2>
+      <p>Sample reviews for prototype demonstration.</p>
+    </div>
+    <div class="review-grid">
+      <blockquote class="review">
+        <div class="review-stars">★★★★★</div>
+        <p>"Fast delivery, beautiful packaging, and a bookmark in every order!"</p>
+        <footer><strong>Ayesha Perera</strong><span>Sample Review</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="review-stars">★★★★★</div>
+        <p>"The staff picks section is dangerous for my wallet. Everything I've ordered has been a hit."</p>
+        <footer><strong>Dinithi Fernando</strong><span>Sample Review</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="review-stars">★★★★☆</div>
+        <p>"Great range and honest prices. My new go-to for gifts."</p>
+        <footer><strong>Sanduni Silva</strong><span>Sample Review</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div>
+        <h2>Join the Reading Club</h2>
+        <p>Weekly book recommendations, exclusive offers, and reading challenges.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for joining! (Prototype — no data sent)');">
+        <input type="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="section-head">
+      <h2>Visit Our Shop</h2>
+      <p>Sample details for this prototype.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="ci">📍</div>
+        <h3>Address</h3>
+        <p>123 Book Lane, Colombo 07<br><small>(sample location)</small></p>
+      </div>
+      <div class="contact-card">
+        <div class="ci">🕐</div>
+        <h3>Hours</h3>
+        <p>Mon-Sat: 9am - 8pm<br>Sun: 10am - 6pm<br><small>(sample hours)</small></p>
+      </div>
+      <div class="contact-card">
+        <div class="ci">📞</div>
+        <h3>Phone</h3>
+        <p>+94 77 987 6543<br><small>(sample number)</small></p>
+      </div>
+      <div class="contact-card">
+        <div class="ci">✉️</div>
+        <h3>Email</h3>
+        <p>hello@booknook.lk<br><small>(sample email)</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>BookNook 📚</h3>
+        <p>Hand-picked books for curious readers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#books">Books</a>
+        <a href="#staff">Staff Picks</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="#contact">Store Info</a>
+        <a href="#contact">Hours</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Goodreads">Goodreads</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 BookNook — Sample Prototype by Nethmi Thakshila</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+</body>
+</html>
+

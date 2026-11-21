@@ -1,0 +1,93 @@
+﻿PROJECT SCOPE STATEMENT
+BookNook Bookshop Website
+
+Prepared by   : Nethmi Thakshila
+Date          : Week 2
+Version       : 1.0
+
+CONTENTS
+  1. Project Purpose
+  2. In Scope
+  3. Out of Scope
+  4. Deliverables
+  5. Acceptance Criteria
+  6. Constraints
+  7. Assumptions
+
+1. PROJECT PURPOSE
+
+   Deliver a responsive website prototype for an independent
+   bookshop, demonstrating the full project management lifecycle.
+
+2. IN SCOPE
+
+   2.1 Pages and Sections
+       - Homepage (hero, search, features, catalogue)
+       - Book catalogue with genre categories
+       - Staff Picks section
+       - Reader Reviews section
+       - Newsletter signup (front-end only)
+       - Contact section
+       - Footer
+
+   2.2 Features
+       - Category filter (6 genres)
+       - Live search by title or author
+       - Save/Bookmark heart on each book
+       - Responsive layout (desktop, tablet, mobile)
+       - Basic accessibility (alt text, keyboard navigation)
+
+   2.3 Content
+       - 12 sample books across 6 genres with SVG covers
+       - Sample staff picks and reader reviews
+       - Shop contact details marked TBD until confirmed
+
+   2.4 Project Management
+       - Full PM documentation set (16 documents)
+       - Risk register, schedule, WBS, test plan
+       - GitHub repository and documentation
+
+3. OUT OF SCOPE
+
+   - Online payment gateway
+   - Customer registration and login
+   - Admin dashboard or CMS
+   - Delivery tracking
+   - Order management
+   - Inventory management
+   - Email marketing automation
+   - Multi-language support
+
+   These may be considered for future phases.
+
+4. DELIVERABLES
+
+   D1  Working responsive website prototype
+   D2  Source code in a GitHub repository
+   D3  Full project management documentation
+   D4  Test plan and test report
+   D5  Final presentation
+   D6  Project closure report
+
+5. ACCEPTANCE CRITERIA
+
+   - All in-scope pages accessible and navigable
+   - Book catalogue displays 12 books with required fields
+   - Search and category filter work without errors
+   - Responsive layout verified on all three device sizes
+   - All internal links functional
+   - Repository organised and readable
+   - All project management documents completed
+
+6. CONSTRAINTS
+
+   - Fixed four-week timeline
+   - Single-person team (PM is also the developer)
+   - No budget, free tools only
+   - Shop information dependent on approval
+
+7. ASSUMPTIONS
+
+   - Shop information can be obtained or marked TBD
+   - Prototype does not need to be a full e-commerce site
+   - Users have modern browsers

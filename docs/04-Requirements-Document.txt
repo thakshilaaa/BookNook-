@@ -1,0 +1,64 @@
+﻿REQUIREMENTS DOCUMENT (INITIAL)
+BookNook Bookshop Website
+
+Prepared by   : Nethmi Thakshila
+Date          : Week 1
+Version       : 1.0
+
+Priority scheme: MoSCoW (Must / Should / Could / Won't)
+
+CONTENTS
+  1. Business Requirements
+  2. Functional Requirements
+  3. Non-Functional Requirements
+  4. Content Requirements
+  5. Assumptions
+
+1. BUSINESS REQUIREMENTS
+
+   BR-01  Provide a professional online presence for the shop.      Must
+   BR-02  Showcase books by genre with descriptive info.            Must
+   BR-03  Make contact details and hours easy to find.              Must
+   BR-04  Support mobile and tablet visitors.                       Must
+   BR-05  Allow future expansion to e-commerce features.            Could
+
+2. FUNCTIONAL REQUIREMENTS
+
+   FR-01  Homepage with shop introduction and navigation menu.      Must
+   FR-02  Promotional hero section.                                 Must
+   FR-03  Search bar (by title or author).                          Must
+   FR-04  Book catalogue grouped by genre.                          Must
+   FR-05  Each book shows cover, title, author, description, price. Must
+   FR-06  Category filter buttons.                                  Must
+   FR-07  Staff Picks section showcasing curated books.             Should
+   FR-08  Reader Reviews section (sample reviews).                  Should
+   FR-09  Contact section with address, hours, phone, email.        Must
+   FR-10  Footer with copyright and links.                          Must
+   FR-11  Save/Bookmark heart on each book.                         Could
+
+3. NON-FUNCTIONAL REQUIREMENTS
+
+   NFR-01  Responsive on desktop, tablet and mobile.                Must
+   NFR-02  Page loads quickly on common connections.                Must
+   NFR-03  Clear, readable typography and colour contrast.          Must
+   NFR-04  Consistent warm bookshop visual style.                   Must
+   NFR-05  Accessible: alt text, semantic HTML, keyboard nav.       Should
+   NFR-06  Cross-browser: Chrome, Edge, Firefox, Safari.            Must
+   NFR-07  Maintainable: organised folder structure.                Should
+
+4. CONTENT REQUIREMENTS (TO BE CONFIRMED)
+
+   - Shop name, logo, branding
+   - Book catalogue with covers and prices
+   - Contact info (address, hours, phone, email)
+   - Social media links
+   - Owner's curated picks
+
+   Note: any unverified content uses placeholder text or images
+   and is clearly marked as SAMPLE.
+
+5. ASSUMPTIONS
+
+   - Shop information will be provided or confirmed in Week 1-2.
+   - Books can be displayed without online payment.
+   - All development tools are available free of charge.
